@@ -14,7 +14,7 @@ function enterScreen(index){
     });
 
     heading.classList.remove("animate-before", "animate-after");
-}
+};
 
 function exitScreen(index, exitDelay){
     const grid = grids[index];
@@ -30,7 +30,7 @@ function exitScreen(index, exitDelay){
     setTimeout(() => {
         grid.classList.remove("active");
     }, exitDelay)
-}
+};
 
 function setupAnimationCycle({timePerScreen, exitDelay}){
     const cycleTime = timePerScreen + exitDelay;
@@ -48,14 +48,12 @@ function setupAnimationCycle({timePerScreen, exitDelay}){
         }, timePerScreen)
         
         nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
-
-        console.log(nextIndex);
     }
 
     //enterScreen(0);
     nextCycle();
     setInterval(nextCycle, cycleTime);
-}
+};
 
 setupAnimationCycle({
     timePerScreen: 3500,
@@ -64,7 +62,6 @@ setupAnimationCycle({
 
 window.onscroll = function(){
     y = window.scrollY;
-    console.log(y);
     if(window.scrollY >= 318){
         fondo.classList.add("fondo");
        //document.querySelector(".grid-container").style.filter = "brightness(0.3)";
@@ -72,7 +69,7 @@ window.onscroll = function(){
         //document.querySelector(".grid-container").style.filter = "none";
         fondo.classList.remove("fondo");
     }
-}
+};
 
 document.querySelector("#btn").addEventListener("click", e => {
     window.scroll({
@@ -81,5 +78,5 @@ document.querySelector("#btn").addEventListener("click", e => {
         behavior: "smooth"
     });
     e.preventDefault();
-})
+});
 
