@@ -788,6 +788,12 @@ main form footer a {
   }
 }
 
+@media (max-width: 620px) {
+  header nav {
+    display: none;
+  }
+}
+
 @media (max-width: 425px) {
   main {
     width: 100%;
