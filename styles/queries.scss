@@ -1,0 +1,50 @@
+@import "./_reset.scss";
+@import "./variables.scss";
+@import "./animation.scss";
+
+@import "./header.scss";
+@import "./heading.scss";
+@import "./grid.scss";
+@import "./main.scss";
+
+@media (max-width: 1440px){
+    main .main-container form .form-inputs{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1024px){
+    main .main-container .main-text h4{
+        font-size: 55px;
+    }
+
+    main .main-container form{
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px){
+    main .main-container{
+        flex-direction: column;
+
+        .main-text h4{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 425px){
+    main{
+        width: 100%;
+        .main-container{
+            width: 100%;
+            form{
+                width: 80%;
+
+                .form-inputs{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
