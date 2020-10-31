@@ -112,6 +112,7 @@ header nav .button button {
   padding: 11px 12px;
   border-radius: 24px;
   border: none;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,6 +132,10 @@ header nav .button .login {
 header nav .button .signup {
   margin-left: 16px;
   background: #efefef;
+}
+
+header .btn-responsive {
+  display: none;
 }
 
 .heading {
@@ -479,6 +484,7 @@ header nav .button button {
   padding: 11px 12px;
   border-radius: 24px;
   border: none;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,6 +504,10 @@ header nav .button .login {
 header nav .button .signup {
   margin-left: 16px;
   background: #efefef;
+}
+
+header .btn-responsive {
+  display: none;
 }
 
 .heading {
@@ -792,6 +802,30 @@ main form footer a {
   header nav {
     display: none;
   }
+  header .btn-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+  }
+  header nav.nav-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    height: 200px;
+    z-index: 20;
+    top: -445px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+  }
 }
 
 @media (max-width: 425px) {
@@ -806,6 +840,9 @@ main form footer a {
   }
   main .main-container form .form-inputs {
     width: 80%;
+  }
+  .heading .text {
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

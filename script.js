@@ -1,6 +1,8 @@
 const grids = document.querySelectorAll(".grid");
 const headings = document.querySelectorAll(".heading .wrapper .text");
 const fondo = document.querySelector("#fondo");
+const btnResponsive = document.getElementById("btn-responsive");
+const navegacion = document.querySelector("nav");
 
 function enterScreen(index){
     const grid = grids[index];
@@ -36,8 +38,6 @@ function setupAnimationCycle({timePerScreen, exitDelay}){
     const cycleTime = timePerScreen + exitDelay;
     let nextIndex = 0;
 
-    console.log(nextIndex);
-
     function nextCycle(){
         const currentIndex = nextIndex;
 
@@ -71,12 +71,11 @@ window.onscroll = function(){
     }
 };
 
-document.querySelector("#btn").addEventListener("click", e => {
-    window.scroll({
-        top: 850,
-        left: 0,
-        behavior: "smooth"
-    });
-    e.preventDefault();
+btnResponsive.addEventListener("click", e => {
+    console.log(navegacion);
+    if(navegacion.className){
+        navegacion.classList.remove("nav-responsive");
+    }else{
+        navegacion.classList.add("nav-responsive");
+    }
 });
-

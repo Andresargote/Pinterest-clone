@@ -38,6 +38,7 @@ header{
                 padding: 11px 12px;
                 border-radius: 24px;
                 border: none;
+                cursor: pointer;
 
                 display: flex;
                 align-items: center;
@@ -56,5 +57,9 @@ header{
             }
         }
 
+    }
+
+    .btn-responsive{
+        display: none;
     }
 }

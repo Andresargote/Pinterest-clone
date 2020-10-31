@@ -37,6 +37,24 @@
     header nav{
         display: none;
     }
+    header .btn-responsive{
+        display: flex;
+        cursor: pointer;
+    }
+
+    header nav.nav-responsive{
+        display: flex; 
+        flex-direction: column; 
+        position: absolute; 
+        height: 200px; 
+        z-index: 20;
+        top: -445px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: $white;
+    }
 }
 
 @media (max-width: 425px){
@@ -52,5 +70,9 @@
                 }
             }
         }
+    }
+
+    .heading .text{
+        font-size: 40px;
     }
 }

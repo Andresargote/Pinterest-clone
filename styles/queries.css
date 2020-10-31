@@ -104,6 +104,10 @@ header nav .button .signup {
   background: #efefef;
 }
 
+header .btn-responsive {
+  display: none;
+}
+
 .heading {
   margin-top: 120px;
   display: -webkit-box;
